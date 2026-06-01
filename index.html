@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_3129ccce90461a5a8e0f3ab3b78aa16f {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_3129ccce90461a5a8e0f3ab3b78aa16f" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_3129ccce90461a5a8e0f3ab3b78aa16f = L.map(
+                "map_3129ccce90461a5a8e0f3ab3b78aa16f",
+                {
+                    center: [33.3617, 126.5292],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_1c1a331331c8a803a99cf65fcfe77fad = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_1c1a331331c8a803a99cf65fcfe77fad.addTo(map_3129ccce90461a5a8e0f3ab3b78aa16f);
+        
+    
+            var marker_a05a10f86c70e35fbe9924db66663d15 = L.marker(
+                [33.2464, 126.555],
+                {
+}
+            ).addTo(map_3129ccce90461a5a8e0f3ab3b78aa16f);
+        
+    
+            var icon_cb27e84f6837f6a348f44c6776d67e9c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "fire",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fd4a72015649204c5b4f971ab8a0b7e6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d57d0b6f192d9350285aeed43592d3a1 = $(`<div id="html_d57d0b6f192d9350285aeed43592d3a1" style="width: 100.0%; height: 100.0%;">     <div style='width:260px; font-family: "Malgun Gothic", sans-serif; padding: 5px;'>         <h4 style='margin: 0 0 5px 0; color:#333; font-size:16px;'>📍 천지연폭포</h4>         <p style='margin:0 0 5px 0; font-size:11px; color:#666;'>🏠 제주 서귀포시 천지동 (폭포 정점)</p>          <div style='width:100%; height:130px; overflow:hidden; border-radius:6px; margin-bottom:8px;'>             <img src='https://api.cdn.visitjeju.net/photomng/imgpath/202409/24/15f30667-21ed-4722-aaa3-d4a64e02a9a2.webp' style='width:100%; height:100%; object-fit:cover;'>         </div>          <p style='margin:0; font-size:12px; color:#c0392b;'><b>📊 방문자 수:</b> 134,507명 (25년 8월 기준)</p>         <hr style='border: 0.5px solid #eee; margin: 8px 0;'>         <p style='margin:0; font-size:12px; line-height:1.5; color:#444; text-align:justify;'>             <b>📜 설화 이야기:</b><br>옛날 소에 살던 신성한 용이 가뭄 때마다 비를 내려주었다는 기우제 전통과, 효성 깊은 소년이 여의주를 얻었다는 전설이 깃든 곳입니다.<br><br><span style='font-size:10px; color:#999;'>📷 사진 출처: 비짓제주 (제주관광공사)</span>         </p>     </div>     </div>`)[0];
+                popup_fd4a72015649204c5b4f971ab8a0b7e6.setContent(html_d57d0b6f192d9350285aeed43592d3a1);
+            
+        
+
+        marker_a05a10f86c70e35fbe9924db66663d15.bindPopup(popup_fd4a72015649204c5b4f971ab8a0b7e6)
+        ;
+
+        
+    
+    
+                marker_a05a10f86c70e35fbe9924db66663d15.setIcon(icon_cb27e84f6837f6a348f44c6776d67e9c);
+            
+    
+            var marker_57b37fdf3edfb30b89c6bd0824f19b1f = L.marker(
+                [33.2376, 126.4253],
+                {
+}
+            ).addTo(map_3129ccce90461a5a8e0f3ab3b78aa16f);
+        
+    
+            var icon_03fdd6e89a7ee5e2531dbe266ef173d2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "fire",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_646482ccbcd2c32c1574bee8bf12eca3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d2b6ae30f789e33d28e0350dad5e11ab = $(`<div id="html_d2b6ae30f789e33d28e0350dad5e11ab" style="width: 100.0%; height: 100.0%;">     <div style='width:260px; font-family: "Malgun Gothic", sans-serif; padding: 5px;'>         <h4 style='margin: 0 0 5px 0; color:#333; font-size:16px;'>📍 중문대포 주상절리대</h4>         <p style='margin:0 0 5px 0; font-size:11px; color:#666;'>🏠 제주 서귀포시 이어도로 36-30 (전망대 위치)</p>          <div style='width:100%; height:130px; overflow:hidden; border-radius:6px; margin-bottom:8px;'>             <img src='https://api.cdn.visitjeju.net/photomng/imgpath/202410/21/61c73254-8dbb-4cbb-ad63-ab9aa51dfb6b.webp' style='width:100%; height:100%; object-fit:cover;'>         </div>          <p style='margin:0; font-size:12px; color:#c0392b;'><b>📊 방문자 수:</b> 102,362명 (25년 8월 기준)</p>         <hr style='border: 0.5px solid #eee; margin: 8px 0;'>         <p style='margin:0; font-size:12px; line-height:1.5; color:#444; text-align:justify;'>             <b>📜 설화 이야기:</b><br>주민들 사이에서 '지삿개'라 불리던 곳으로, 거대한 육각 돌기둥들이 늘어서 있어 옛날 거인들이나 용왕이 직접 쌓은 성벽이라는 전설이 있습니다.<br><br><span style='font-size:10px; color:#999;'>📷 사진 출처: 비짓제주 (제주관광공사)</span>         </p>     </div>     </div>`)[0];
+                popup_646482ccbcd2c32c1574bee8bf12eca3.setContent(html_d2b6ae30f789e33d28e0350dad5e11ab);
+            
+        
+
+        marker_57b37fdf3edfb30b89c6bd0824f19b1f.bindPopup(popup_646482ccbcd2c32c1574bee8bf12eca3)
+        ;
+
+        
+    
+    
+                marker_57b37fdf3edfb30b89c6bd0824f19b1f.setIcon(icon_03fdd6e89a7ee5e2531dbe266ef173d2);
+            
+    
+            var marker_2ea476cc3a6d390adda9fc9c65fb770d = L.marker(
+                [33.2449, 126.5718],
+                {
+}
+            ).addTo(map_3129ccce90461a5a8e0f3ab3b78aa16f);
+        
+    
+            var icon_4ea0f9aa6465972e196a856b73548787 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "fire",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a78d477d8faf4cebefae30580c17ab75 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_47d9e9a9c47a8d3d77cc6732752cfb01 = $(`<div id="html_47d9e9a9c47a8d3d77cc6732752cfb01" style="width: 100.0%; height: 100.0%;">     <div style='width:260px; font-family: "Malgun Gothic", sans-serif; padding: 5px;'>         <h4 style='margin: 0 0 5px 0; color:#333; font-size:16px;'>📍 정방폭포</h4>         <p style='margin:0 0 5px 0; font-size:11px; color:#666;'>🏠 제주 서귀포시 칠십리로214번길 37 (폭포 낙하지점)</p>          <div style='width:100%; height:130px; overflow:hidden; border-radius:6px; margin-bottom:8px;'>             <img src='https://api.cdn.visitjeju.net/photomng/imgpath/202409/25/67cb3000-6d0b-49b9-b25f-a8a95df884cd.webp' style='width:100%; height:100%; object-fit:cover;'>         </div>          <p style='margin:0; font-size:12px; color:#c0392b;'><b>📊 방문자 수:</b> 84,022명 (25년 8월 기준)</p>         <hr style='border: 0.5px solid #eee; margin: 8px 0;'>         <p style='margin:0; font-size:12px; line-height:1.5; color:#444; text-align:justify;'>             <b>📜 설화 이야기:</b><br>중국 진시황의 신하 '서불'이 불로초를 찾다 정방폭포 절벽에 '서불과차'라는 글자를 새기고 돌아갔다는 설화로, 서귀포 지명의 유래가 되었습니다.<br><br><span style='font-size:10px; color:#999;'>📷 사진 출처: 비짓제주 (제주관광공사)</span>         </p>     </div>     </div>`)[0];
+                popup_a78d477d8faf4cebefae30580c17ab75.setContent(html_47d9e9a9c47a8d3d77cc6732752cfb01);
+            
+        
+
+        marker_2ea476cc3a6d390adda9fc9c65fb770d.bindPopup(popup_a78d477d8faf4cebefae30580c17ab75)
+        ;
+
+        
+    
+    
+                marker_2ea476cc3a6d390adda9fc9c65fb770d.setIcon(icon_4ea0f9aa6465972e196a856b73548787);
+            
+    
+            var marker_38d23b0b5767d08d39df8eace5194680 = L.marker(
+                [33.4582, 126.938],
+                {
+}
+            ).addTo(map_3129ccce90461a5a8e0f3ab3b78aa16f);
+        
+    
+            var icon_786d5c4dadbaf48f061138d4cf369a63 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "fire",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cb8f686743bc059b8fbb5c47ea99b467 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6bdd704ad16fe9cf811676f4ecea2632 = $(`<div id="html_6bdd704ad16fe9cf811676f4ecea2632" style="width: 100.0%; height: 100.0%;">     <div style='width:260px; font-family: "Malgun Gothic", sans-serif; padding: 5px;'>         <h4 style='margin: 0 0 5px 0; color:#333; font-size:16px;'>📍 성산일출봉</h4>         <p style='margin:0 0 5px 0; font-size:11px; color:#666;'>🏠 제주 서귀포시 성산읍 일출로 284-12 (매표소/입구)</p>          <div style='width:100%; height:130px; overflow:hidden; border-radius:6px; margin-bottom:8px;'>             <img src='https://api.cdn.visitjeju.net/photomng/imgpath/202409/19/3588ff67-3597-4bc7-a905-ed129cb6e5a2.webp' style='width:100%; height:100%; object-fit:cover;'>         </div>          <p style='margin:0; font-size:12px; color:#c0392b;'><b>📊 방문자 수:</b> 63,746명 (25년 8월 기준)</p>         <hr style='border: 0.5px solid #eee; margin: 8px 0;'>         <p style='margin:0; font-size:12px; line-height:1.5; color:#444; text-align:justify;'>             <b>📜 설화 이야기:</b><br>거인 설문대할망이 밤에 흙을 치마에 담아 나르다 흘린 흙이 오름이 되었으며, 할망이 밤마다 바느질을 할 때 등잔대로 삼았다는 전설이 전해집니다.<br><br><span style='font-size:10px; color:#999;'>📷 사진 출처: 비짓제주 (제주관광공사)</span>         </p>     </div>     </div>`)[0];
+                popup_cb8f686743bc059b8fbb5c47ea99b467.setContent(html_6bdd704ad16fe9cf811676f4ecea2632);
+            
+        
+
+        marker_38d23b0b5767d08d39df8eace5194680.bindPopup(popup_cb8f686743bc059b8fbb5c47ea99b467)
+        ;
+
+        
+    
+    
+                marker_38d23b0b5767d08d39df8eace5194680.setIcon(icon_786d5c4dadbaf48f061138d4cf369a63);
+            
+    
+            var marker_fd59ee0bba60584c55c9f99c4677ec27 = L.marker(
+                [33.3617, 126.5292],
+                {
+}
+            ).addTo(map_3129ccce90461a5a8e0f3ab3b78aa16f);
+        
+    
+            var icon_cbcf423d2d676eca0d4c7ab5b13f0472 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "fire",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_55e13413237ca04443fa57007af96168 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_39f3a34f60683d317b8d01e9c9d12338 = $(`<div id="html_39f3a34f60683d317b8d01e9c9d12338" style="width: 100.0%; height: 100.0%;">     <div style='width:260px; font-family: "Malgun Gothic", sans-serif; padding: 5px;'>         <h4 style='margin: 0 0 5px 0; color:#333; font-size:16px;'>📍 한라산 (백록담)</h4>         <p style='margin:0 0 5px 0; font-size:11px; color:#666;'>🏠 제주 서귀포시 토평동 산15-1 (백록담 중심 분화구)</p>          <div style='width:100%; height:130px; overflow:hidden; border-radius:6px; margin-bottom:8px;'>             <img src='https://api.cdn.visitjeju.net/photomng/imgpath/202111/01/505c302c-fca0-4ca2-bf71-b4875fa289d6.webp' style='width:100%; height:100%; object-fit:cover;'>         </div>          <p style='margin:0; font-size:12px; color:#c0392b;'><b>📊 방문자 수:</b> 54,846명 (25년 8월 기준)</p>         <hr style='border: 0.5px solid #eee; margin: 8px 0;'>         <p style='margin:0; font-size:12px; line-height:1.5; color:#444; text-align:justify;'>             <b>📜 설화 이야기:</b><br>제주를 만든 설문대할망 거인 신화의 중심지이며, 정상의 백록담은 신선들이 하늘에서 내려와 흰 사슴(백록)을 타고 놀았다는 데서 유래했습니다.<br><br><span style='font-size:10px; color:#999;'>📷 사진 출처: 비짓제주 (제주관광공사)</span>         </p>     </div>     </div>`)[0];
+                popup_55e13413237ca04443fa57007af96168.setContent(html_39f3a34f60683d317b8d01e9c9d12338);
+            
+        
+
+        marker_fd59ee0bba60584c55c9f99c4677ec27.bindPopup(popup_55e13413237ca04443fa57007af96168)
+        ;
+
+        
+    
+    
+                marker_fd59ee0bba60584c55c9f99c4677ec27.setIcon(icon_cbcf423d2d676eca0d4c7ab5b13f0472);
+            
+    
+            var marker_ccb5cdab1ab850c8679cd50eba7be761 = L.marker(
+                [33.528, 126.7715],
+                {
+}
+            ).addTo(map_3129ccce90461a5a8e0f3ab3b78aa16f);
+        
+    
+            var icon_11b929176964d00277ebb6d62d0bea86 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "fire",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d8592e100de363a1ef63f6022d14da48 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b77aea6e819867d2429cbb97aa89bae5 = $(`<div id="html_b77aea6e819867d2429cbb97aa89bae5" style="width: 100.0%; height: 100.0%;">     <div style='width:260px; font-family: "Malgun Gothic", sans-serif; padding: 5px;'>         <h4 style='margin: 0 0 5px 0; color:#333; font-size:16px;'>📍 만장굴</h4>         <p style='margin:0 0 5px 0; font-size:11px; color:#666;'>🏠 제주 제주시 구좌읍 만장굴길 182 (만장굴 입구 홍보관)</p>          <div style='width:100%; height:130px; overflow:hidden; border-radius:6px; margin-bottom:8px;'>             <img src='https://api.cdn.visitjeju.net/photomng/imgpath/202110/28/a8c617a7-0b5e-4771-825b-c68d96904443.webp' style='width:100%; height:100%; object-fit:cover;'>         </div>          <p style='margin:0; font-size:12px; color:#c0392b;'><b>📊 방문자 수:</b> 약 75,000명 (정상 개방 기준)</p>         <hr style='border: 0.5px solid #eee; margin: 8px 0;'>         <p style='margin:0; font-size:12px; line-height:1.5; color:#444; text-align:justify;'>             <b>📜 설화 이야기:</b><br>매년 처녀를 제물로 바치지 않으면 재앙을 내리던 김녕사굴의 거대한 구렁이를 조선 시대 서린 판관이 군사들과 함께 퇴치했다는 영웅 설화입니다.<br><br><span style='font-size:10px; color:#999;'>📷 사진 출처: 비짓제주 (제주관광공사)</span>         </p>     </div>     </div>`)[0];
+                popup_d8592e100de363a1ef63f6022d14da48.setContent(html_b77aea6e819867d2429cbb97aa89bae5);
+            
+        
+
+        marker_ccb5cdab1ab850c8679cd50eba7be761.bindPopup(popup_d8592e100de363a1ef63f6022d14da48)
+        ;
+
+        
+    
+    
+                marker_ccb5cdab1ab850c8679cd50eba7be761.setIcon(icon_11b929176964d00277ebb6d62d0bea86);
+            
+    
+            var marker_1686b0a053fdce7ebd6503d09a46d6f7 = L.marker(
+                [33.236, 126.3595],
+                {
+}
+            ).addTo(map_3129ccce90461a5a8e0f3ab3b78aa16f);
+        
+    
+            var icon_899f0664617f8c51a39f27109c9c426c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_163d6e3541ae5037448d2c3682554e8d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e486fb725f5fab1f9e0e5953abe25183 = $(`<div id="html_e486fb725f5fab1f9e0e5953abe25183" style="width: 100.0%; height: 100.0%;">     <div style='width:260px; font-family: "Malgun Gothic", sans-serif; padding: 5px;'>         <h4 style='margin: 0 0 5px 0; color:#333; font-size:16px;'>📍 박수기정</h4>         <p style='margin:0 0 5px 0; font-size:11px; color:#666;'>🏠 제주 서귀포시 안덕면 창천리 (대평포구 옆 주상절리 절벽)</p>          <div style='width:100%; height:130px; overflow:hidden; border-radius:6px; margin-bottom:8px;'>             <img src='https://www.jeju.go.kr/images/ko/travel/cit_img09_02.jpg' style='width:100%; height:100%; object-fit:cover;'>         </div>          <p style='margin:0; font-size:12px; color:#c0392b;'><b>📊 방문자 수:</b> 공식 통계 미집계 (자료 없음)</p>         <hr style='border: 0.5px solid #eee; margin: 8px 0;'>         <p style='margin:0; font-size:12px; line-height:1.5; color:#444; text-align:justify;'>             <b>📜 설화 이야기:</b><br>옥황상제의 아들이 하늘에서 인간 세상을 내려다보다가, 이곳 대평리 절벽의 수려한 기암절벽 경치에 반해 지상으로 내려와 살았다는 전설입니다.<br><br><span style='font-size:10px; color:#999;'>📷 사진 출처: 비짓제주 (제주관광공사)</span>         </p>     </div>     </div>`)[0];
+                popup_163d6e3541ae5037448d2c3682554e8d.setContent(html_e486fb725f5fab1f9e0e5953abe25183);
+            
+        
+
+        marker_1686b0a053fdce7ebd6503d09a46d6f7.bindPopup(popup_163d6e3541ae5037448d2c3682554e8d)
+        ;
+
+        
+    
+    
+                marker_1686b0a053fdce7ebd6503d09a46d6f7.setIcon(icon_899f0664617f8c51a39f27109c9c426c);
+            
+    
+            var marker_2bd64a30e536542d59c60ef409690bd8 = L.marker(
+                [33.2524, 126.4182],
+                {
+}
+            ).addTo(map_3129ccce90461a5a8e0f3ab3b78aa16f);
+        
+    
+            var icon_a3d5260c0e0ec2055405bdce11c9e03a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f609762cb36cf808f3218e9d5ed5d006 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_73adb2117c40ea6d4bc9b8f4bc4ef718 = $(`<div id="html_73adb2117c40ea6d4bc9b8f4bc4ef718" style="width: 100.0%; height: 100.0%;">     <div style='width:260px; font-family: "Malgun Gothic", sans-serif; padding: 5px;'>         <h4 style='margin: 0 0 5px 0; color:#333; font-size:16px;'>📍 천제연폭포</h4>         <p style='margin:0 0 5px 0; font-size:11px; color:#666;'>🏠 제주 서귀포시 천제연로 132 (제2폭포 앞)</p>          <div style='width:100%; height:130px; overflow:hidden; border-radius:6px; margin-bottom:8px;'>             <img src='https://api.cdn.visitjeju.net/photomng/imgpath/202110/26/2d16da18-90bb-45d2-b356-cb9ce359122f.webp' style='width:100%; height:100%; object-fit:cover;'>         </div>          <p style='margin:0; font-size:12px; color:#c0392b;'><b>📊 방문자 수:</b> 55,238명 (25년 8월 기준)</p>         <hr style='border: 0.5px solid #eee; margin: 8px 0;'>         <p style='margin:0; font-size:12px; line-height:1.5; color:#444; text-align:justify;'>             <b>📜 설화 이야기:</b><br>옥황상제를 모시는 일곱 선녀가 밤마다 보랏빛 구름을 타고 맑은 물이 솟아나는 천제연으로 내려와 목욕을 하고 놀았다는 아름다운 전설입니다.<br><br><span style='font-size:10px; color:#999;'>📷 사진 출처: 비짓제주 (제주관광공사)</span>         </p>     </div>     </div>`)[0];
+                popup_f609762cb36cf808f3218e9d5ed5d006.setContent(html_73adb2117c40ea6d4bc9b8f4bc4ef718);
+            
+        
+
+        marker_2bd64a30e536542d59c60ef409690bd8.bindPopup(popup_f609762cb36cf808f3218e9d5ed5d006)
+        ;
+
+        
+    
+    
+                marker_2bd64a30e536542d59c60ef409690bd8.setIcon(icon_a3d5260c0e0ec2055405bdce11c9e03a);
+            
+    
+            var marker_806726ac2dcd93f6e0404e4e4f1a15a0 = L.marker(
+                [33.2435, 126.3148],
+                {
+}
+            ).addTo(map_3129ccce90461a5a8e0f3ab3b78aa16f);
+        
+    
+            var icon_7472f0bd8fcba2b1e8e12fc4761606a9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7c72eb844b4e8d2ae3b5147ce6d02d55 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_50fbe10527d6f0ab927f4d09f723c027 = $(`<div id="html_50fbe10527d6f0ab927f4d09f723c027" style="width: 100.0%; height: 100.0%;">     <div style='width:260px; font-family: "Malgun Gothic", sans-serif; padding: 5px;'>         <h4 style='margin: 0 0 5px 0; color:#333; font-size:16px;'>📍 산방산</h4>         <p style='margin:0 0 5px 0; font-size:11px; color:#666;'>🏠 제주 서귀포시 안덕면 사계리 (산방굴사 위치)</p>          <div style='width:100%; height:130px; overflow:hidden; border-radius:6px; margin-bottom:8px;'>             <img src='https://api.cdn.visitjeju.net/photomng/imgpath/202410/16/4257764a-8a3f-4905-a1b8-c882a0de7da9.webp' style='width:100%; height:100%; object-fit:cover;'>         </div>          <p style='margin:0; font-size:12px; color:#c0392b;'><b>📊 방문자 수:</b> 27,858명 (25년 8월 기준)</p>         <hr style='border: 0.5px solid #eee; margin: 8px 0;'>         <p style='margin:0; font-size:12px; line-height:1.5; color:#444; text-align:justify;'>             <b>📜 설화 이야기:</b><br>산방산 소굴에는 바위가 되어 눈물을 흘리는 여신 '산방덕이'의 슬픈 설화가 깃들어 있으며, 천장에서 떨어지는 약수는 산방덕이의 눈물이라고 전해집니다.<br><br><span style='font-size:10px; color:#999;'>📷 사진 출처: 비짓제주 (제주관광공사)</span>         </p>     </div>     </div>`)[0];
+                popup_7c72eb844b4e8d2ae3b5147ce6d02d55.setContent(html_50fbe10527d6f0ab927f4d09f723c027);
+            
+        
+
+        marker_806726ac2dcd93f6e0404e4e4f1a15a0.bindPopup(popup_7c72eb844b4e8d2ae3b5147ce6d02d55)
+        ;
+
+        
+    
+    
+                marker_806726ac2dcd93f6e0404e4e4f1a15a0.setIcon(icon_7472f0bd8fcba2b1e8e12fc4761606a9);
+            
+    
+            var marker_cd8a5f562020f6382e8aecdb4df5fd39 = L.marker(
+                [33.2318, 126.3148],
+                {
+}
+            ).addTo(map_3129ccce90461a5a8e0f3ab3b78aa16f);
+        
+    
+            var icon_4e03cdb9c846c854e715c729c06107b6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6d45c6b74adf2e4219083014b236de18 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e19a9248fca0f2c3edd6fbd3bdd6dcac = $(`<div id="html_e19a9248fca0f2c3edd6fbd3bdd6dcac" style="width: 100.0%; height: 100.0%;">     <div style='width:260px; font-family: "Malgun Gothic", sans-serif; padding: 5px;'>         <h4 style='margin: 0 0 5px 0; color:#333; font-size:16px;'>📍 용머리해안</h4>         <p style='margin:0 0 5px 0; font-size:11px; color:#666;'>🏠 제주 서귀포시 안덕면 사계리 (하멜상선전시관 앞 관람로 입구)</p>          <div style='width:100%; height:130px; overflow:hidden; border-radius:6px; margin-bottom:8px;'>             <img src='https://api.cdn.visitjeju.net/photomng/imgpath/202409/25/4297007f-2918-4bb5-bc75-066410fa520e.webp' style='width:100%; height:100%; object-fit:cover;'>         </div>          <p style='margin:0; font-size:12px; color:#c0392b;'><b>📊 방문자 수:</b> 27,858명 (25년 8월 기준)</p>         <hr style='border: 0.5px solid #eee; margin: 8px 0;'>         <p style='margin:0; font-size:12px; line-height:1.5; color:#444; text-align:justify;'>             <b>📜 설화 이야기:</b><br>중국 진나라 술사 호종단이 제주의 왕 기운을 끊으려고 용의 꼬리와 잔등을 칼로 끊자, 용이 비명을 지르며 붉은 피가 솟구쳐 지금의 절벽 모양이 되었다는 전설입니다.<br><br><span style='font-size:10px; color:#999;'>📷 사진 출처: 비짓제주 (제주관광공사)</span>         </p>     </div>     </div>`)[0];
+                popup_6d45c6b74adf2e4219083014b236de18.setContent(html_e19a9248fca0f2c3edd6fbd3bdd6dcac);
+            
+        
+
+        marker_cd8a5f562020f6382e8aecdb4df5fd39.bindPopup(popup_6d45c6b74adf2e4219083014b236de18)
+        ;
+
+        
+    
+    
+                marker_cd8a5f562020f6382e8aecdb4df5fd39.setIcon(icon_4e03cdb9c846c854e715c729c06107b6);
+            
+    
+            var marker_69f85af854241dc4b1d131fb73a91829 = L.marker(
+                [33.4475, 126.6678],
+                {
+}
+            ).addTo(map_3129ccce90461a5a8e0f3ab3b78aa16f);
+        
+    
+            var icon_ee1e0222988855304ca53ba53a8eeba6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c0ac61bfda9544d8d83ede16219f00a1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_cf2fe7c28e104259a3bafb844453dd4b = $(`<div id="html_cf2fe7c28e104259a3bafb844453dd4b" style="width: 100.0%; height: 100.0%;">     <div style='width:260px; font-family: "Malgun Gothic", sans-serif; padding: 5px;'>         <h4 style='margin: 0 0 5px 0; color:#333; font-size:16px;'>📍 제주 돌문화공원</h4>         <p style='margin:0 0 5px 0; font-size:11px; color:#666;'>🏠 제주 제주시 조천읍 남조로 2023 (공원 매표소 본관)</p>          <div style='width:100%; height:130px; overflow:hidden; border-radius:6px; margin-bottom:8px;'>             <img src='https://api.cdn.visitjeju.net/photomng/imgpath/202111/01/54856a01-9f70-47c4-8831-0d3fd147dc50.webp' style='width:100%; height:100%; object-fit:cover;'>         </div>          <p style='margin:0; font-size:12px; color:#c0392b;'><b>📊 방문자 수:</b> 약 15,000명 (25년 8월 기준 추정)</p>         <hr style='border: 0.5px solid #eee; margin: 8px 0;'>         <p style='margin:0; font-size:12px; line-height:1.5; color:#444; text-align:justify;'>             <b>📜 설화 이야기:</b><br>설문대할망이 아들 오백 형제를 위해 가마솥에 죽을 끓이다 빠져 죽자, 뒤늦게 안 아들들이 슬피 울다 바위로 굳어 오백장군이 되었다는 설화입니다.<br><br><span style='font-size:10px; color:#999;'>📷 사진 출처: 비짓제주 (제주관광공사)</span>         </p>     </div>     </div>`)[0];
+                popup_c0ac61bfda9544d8d83ede16219f00a1.setContent(html_cf2fe7c28e104259a3bafb844453dd4b);
+            
+        
+
+        marker_69f85af854241dc4b1d131fb73a91829.bindPopup(popup_c0ac61bfda9544d8d83ede16219f00a1)
+        ;
+
+        
+    
+    
+                marker_69f85af854241dc4b1d131fb73a91829.setIcon(icon_ee1e0222988855304ca53ba53a8eeba6);
+            
+    
+            var marker_51d226dd0edbc1d6d56f7ce732238367 = L.marker(
+                [33.5065, 126.5316],
+                {
+}
+            ).addTo(map_3129ccce90461a5a8e0f3ab3b78aa16f);
+        
+    
+            var icon_a19aed02996757d4ab687d56bdd47c69 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f605b266d922b6191d1ae0eb85b22ee5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5715f209dfd0eba34b6410480087f003 = $(`<div id="html_5715f209dfd0eba34b6410480087f003" style="width: 100.0%; height: 100.0%;">     <div style='width:260px; font-family: "Malgun Gothic", sans-serif; padding: 5px;'>         <h4 style='margin: 0 0 5px 0; color:#333; font-size:16px;'>📍 삼성혈</h4>         <p style='margin:0 0 5px 0; font-size:11px; color:#666;'>🏠 제주 제주시 삼성로 22 (삼성혈 유적 내부구역)</p>          <div style='width:100%; height:130px; overflow:hidden; border-radius:6px; margin-bottom:8px;'>             <img src='https://api.cdn.visitjeju.net/photomng/imgpath/201804/30/d9544004-cf8a-4047-8e83-8030ff57a642.webp' style='width:100%; height:100%; object-fit:cover;'>         </div>          <p style='margin:0; font-size:12px; color:#c0392b;'><b>📊 방문자 수:</b> 약 8,000명 (25년 8월 기준 추정)</p>         <hr style='border: 0.5px solid #eee; margin: 8px 0;'>         <p style='margin:0; font-size:12px; line-height:1.5; color:#444; text-align:justify;'>             <b>📜 설화 이야기:</b><br>제주인의 원시 시조인 고을나, 양을나, 부을나 세 신인이 땅의 세 구멍(삼성혈)에서 솟아올라 탐라국을 세우고 수렵 생활을 시작했다는 신화입니다.<br><br><span style='font-size:10px; color:#999;'>📷 사진 출처: 비짓제주 (제주관광공사)</span>         </p>     </div>     </div>`)[0];
+                popup_f605b266d922b6191d1ae0eb85b22ee5.setContent(html_5715f209dfd0eba34b6410480087f003);
+            
+        
+
+        marker_51d226dd0edbc1d6d56f7ce732238367.bindPopup(popup_f605b266d922b6191d1ae0eb85b22ee5)
+        ;
+
+        
+    
+    
+                marker_51d226dd0edbc1d6d56f7ce732238367.setIcon(icon_a19aed02996757d4ab687d56bdd47c69);
+            
+    
+            var marker_b12f47dbccb73b33fd6148892daf1137 = L.marker(
+                [33.4243, 126.7118],
+                {
+}
+            ).addTo(map_3129ccce90461a5a8e0f3ab3b78aa16f);
+        
+    
+            var icon_d2313ba70882894b63c4ca1f5add8dec = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b4cecd9455462672f5d90ba7a76ed830 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8a5f1a099390ba65282cca808f657bd6 = $(`<div id="html_8a5f1a099390ba65282cca808f657bd6" style="width: 100.0%; height: 100.0%;">     <div style='width:260px; font-family: "Malgun Gothic", sans-serif; padding: 5px;'>         <h4 style='margin: 0 0 5px 0; color:#333; font-size:16px;'>📍 거문오름</h4>         <p style='margin:0 0 5px 0; font-size:11px; color:#666;'>🏠 제주 제주시 조천읍 선교로 569-17 (제주세계자연유산센터)</p>          <div style='width:100%; height:130px; overflow:hidden; border-radius:6px; margin-bottom:8px;'>             <img src='https://api.cdn.visitjeju.net/photomng/imgpath/201804/30/fd0f28b4-f856-436b-9b53-be06f69ed266.webp' style='width:100%; height:100%; object-fit:cover;'>         </div>          <p style='margin:0; font-size:12px; color:#c0392b;'><b>📊 방문자 수:</b> 7,227명 (25년 8월 기준)</p>         <hr style='border: 0.5px solid #eee; margin: 8px 0;'>         <p style='margin:0; font-size:12px; line-height:1.5; color:#444; text-align:justify;'>             <b>📜 설화 이야기:</b><br>오름의 형세가 마치 아홉 마리의 용들이 여의주를 가운데에 두고 서로 희롱하며 노는 모양새를 닮았다고 하여 '구룡농주' 전설이 내려옵니다.<br><br><span style='font-size:10px; color:#999;'>📷 사진 출처: 비짓제주 (제주관광공사)</span>         </p>     </div>     </div>`)[0];
+                popup_b4cecd9455462672f5d90ba7a76ed830.setContent(html_8a5f1a099390ba65282cca808f657bd6);
+            
+        
+
+        marker_b12f47dbccb73b33fd6148892daf1137.bindPopup(popup_b4cecd9455462672f5d90ba7a76ed830)
+        ;
+
+        
+    
+    
+                marker_b12f47dbccb73b33fd6148892daf1137.setIcon(icon_d2313ba70882894b63c4ca1f5add8dec);
+            
+    
+            var marker_3ad48c4733ad5f87331ce0b1d93fe79e = L.marker(
+                [33.3847, 126.9042],
+                {
+}
+            ).addTo(map_3129ccce90461a5a8e0f3ab3b78aa16f);
+        
+    
+            var icon_5a044c1a4aa283a15ac5b8587e9e003e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_548e9d2a8c3c7635fa5da072603f3738 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7115b88e520a0686b17fd173e65d3752 = $(`<div id="html_7115b88e520a0686b17fd173e65d3752" style="width: 100.0%; height: 100.0%;">     <div style='width:260px; font-family: "Malgun Gothic", sans-serif; padding: 5px;'>         <h4 style='margin: 0 0 5px 0; color:#333; font-size:16px;'>📍 혼인지</h4>         <p style='margin:0 0 5px 0; font-size:11px; color:#666;'>🏠 제주 서귀포시 성산읍 혼인지로 39-22 (혼인지 연못 구역)</p>          <div style='width:100%; height:130px; overflow:hidden; border-radius:6px; margin-bottom:8px;'>             <img src='https://api.cdn.visitjeju.net/photomng/imgpath/202111/12/48057967-e68f-4a1b-9d4f-3500ba3598be.webp' style='width:100%; height:100%; object-fit:cover;'>         </div>          <p style='margin:0; font-size:12px; color:#c0392b;'><b>📊 방문자 수:</b> 약 5,000명 (25년 8월 기준 추정)</p>         <hr style='border: 0.5px solid #eee; margin: 8px 0;'>         <p style='margin:0; font-size:12px; line-height:1.5; color:#444; text-align:justify;'>             <b>📜 설화 이야기:</b><br>삼성혈에서 용출한 삼신인이 동쪽 해안으로 밀려온 상자 속에서 벽랑국 세 공주를 맞이하여, 이 연못에서 혼례를 올렸다는 탐라국의 개국 설화입니다.<br><br><span style='font-size:10px; color:#999;'>📷 사진 출처: 비짓제주 (제주관광공사)</span>         </p>     </div>     </div>`)[0];
+                popup_548e9d2a8c3c7635fa5da072603f3738.setContent(html_7115b88e520a0686b17fd173e65d3752);
+            
+        
+
+        marker_3ad48c4733ad5f87331ce0b1d93fe79e.bindPopup(popup_548e9d2a8c3c7635fa5da072603f3738)
+        ;
+
+        
+    
+    
+                marker_3ad48c4733ad5f87331ce0b1d93fe79e.setIcon(icon_5a044c1a4aa283a15ac5b8587e9e003e);
+            
+    
+            var marker_e0f8093fca77c1abde1e578765370010 = L.marker(
+                [33.4045, 126.6358],
+                {
+}
+            ).addTo(map_3129ccce90461a5a8e0f3ab3b78aa16f);
+        
+    
+            var icon_d0b0af824382c0522d0808b4c1959f85 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "leaf",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_373a143d7d0031df5d6b40d2d4d2bae9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_93fdd4d1634178c4ca888e9e3a912574 = $(`<div id="html_93fdd4d1634178c4ca888e9e3a912574" style="width: 100.0%; height: 100.0%;">     <div style='width:260px; font-family: "Malgun Gothic", sans-serif; padding: 5px;'>         <h4 style='margin: 0 0 5px 0; color:#333; font-size:16px;'>📍 물장오리</h4>         <p style='margin:0 0 5px 0; font-size:11px; color:#666;'>🏠 제주 제주시 봉개동 산78-1 (물장오리오름 산정호수 습지)</p>          <div style='width:100%; height:130px; overflow:hidden; border-radius:6px; margin-bottom:8px;'>             <img src='https://www.jeju.go.kr/images/ko/travel/cit_img07_02.jpg' style='width:100%; height:100%; object-fit:cover;'>         </div>          <p style='margin:0; font-size:12px; color:#c0392b;'><b>📊 방문자 수:</b> 공식 통계 미집계 (자료 없음)</p>         <hr style='border: 0.5px solid #eee; margin: 8px 0;'>         <p style='margin:0; font-size:12px; line-height:1.5; color:#444; text-align:justify;'>             <b>📜 설화 이야기:</b><br>밑이 터져 있어 깊이를 알 수 없다는 산정호수입니다. 키가 크다고 자랑하던 설문대할망이 깊이를 재려 들어갔다 빠져 죽었다는 전설이 있습니다.<br><br><span style='font-size:10px; color:#999;'>📷 사진 출처: 국가유산포털 (공공누리 제1유형)</span>         </p>     </div>     </div>`)[0];
+                popup_373a143d7d0031df5d6b40d2d4d2bae9.setContent(html_93fdd4d1634178c4ca888e9e3a912574);
+            
+        
+
+        marker_e0f8093fca77c1abde1e578765370010.bindPopup(popup_373a143d7d0031df5d6b40d2d4d2bae9)
+        ;
+
+        
+    
+    
+                marker_e0f8093fca77c1abde1e578765370010.setIcon(icon_d0b0af824382c0522d0808b4c1959f85);
+            
+    
+            var marker_d8592bc31d6b108675fbfb39ab1f03ee = L.marker(
+                [33.4563, 126.9202],
+                {
+}
+            ).addTo(map_3129ccce90461a5a8e0f3ab3b78aa16f);
+        
+    
+            var icon_b9eed360d15780673711925a660e87dd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "leaf",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_45ec12a11280d2a56aab7197f4e70f60 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6af4fb30f0be89ab704e56ca0b23fefb = $(`<div id="html_6af4fb30f0be89ab704e56ca0b23fefb" style="width: 100.0%; height: 100.0%;">     <div style='width:260px; font-family: "Malgun Gothic", sans-serif; padding: 5px;'>         <h4 style='margin: 0 0 5px 0; color:#333; font-size:16px;'>📍 식산봉</h4>         <p style='margin:0 0 5px 0; font-size:11px; color:#666;'>🏠 제주 서귀포시 성산읍 성산리 (오조리 하도길 산책로 앞 오름 중심)</p>          <div style='width:100%; height:130px; overflow:hidden; border-radius:6px; margin-bottom:8px;'>             <img src='https://www.jeju.go.kr/images/ko/travel/cit_img08_02.jpg' style='width:100%; height:100%; object-fit:cover;'>         </div>          <p style='margin:0; font-size:12px; color:#c0392b;'><b>📊 방문자 수:</b> 공식 통계 미집계 (자료 없음)</p>         <hr style='border: 0.5px solid #eee; margin: 8px 0;'>         <p style='margin:0; font-size:12px; line-height:1.5; color:#444; text-align:justify;'>             <b>📜 설화 이야기:</b><br>왜구들이 쳐들어오자 군관이 오름 전체를 볏짚으로 덮어 거대한 군량미로 위장하여, 왜구들이 겁을 먹고 스스로 도망치게 했다는 설화입니다.<br><br><span style='font-size:10px; color:#999;'>📷 사진 출처: 국가유산포털 (공공누리 제1유형)</span>         </p>     </div>     </div>`)[0];
+                popup_45ec12a11280d2a56aab7197f4e70f60.setContent(html_6af4fb30f0be89ab704e56ca0b23fefb);
+            
+        
+
+        marker_d8592bc31d6b108675fbfb39ab1f03ee.bindPopup(popup_45ec12a11280d2a56aab7197f4e70f60)
+        ;
+
+        
+    
+    
+                marker_d8592bc31d6b108675fbfb39ab1f03ee.setIcon(icon_b9eed360d15780673711925a660e87dd);
+            
+    
+            var marker_a2c4b564cf24b596d0f40ad9df76a418 = L.marker(
+                [33.3155, 126.1772],
+                {
+}
+            ).addTo(map_3129ccce90461a5a8e0f3ab3b78aa16f);
+        
+    
+            var icon_2a61c6501936dba16107cc9c9b10ff45 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "leaf",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_43908c71e8f16a484c48bf3298e54775 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b84dfbf8b307b66589f7cce5a354f3fe = $(`<div id="html_b84dfbf8b307b66589f7cce5a354f3fe" style="width: 100.0%; height: 100.0%;">     <div style='width:260px; font-family: "Malgun Gothic", sans-serif; padding: 5px;'>         <h4 style='margin: 0 0 5px 0; color:#333; font-size:16px;'>📍 당산봉</h4>         <p style='margin:0 0 5px 0; font-size:11px; color:#666;'>🏠 제주 제주시 한경면 고산리 (당산봉 탐방로 전망지점)</p>          <div style='width:100%; height:130px; overflow:hidden; border-radius:6px; margin-bottom:8px;'>             <img src='https://www.jeju.go.kr/images/ko/travel/cit_img10_02.jpg' style='width:100%; height:100%; object-fit:cover;'>         </div>          <p style='margin:0; font-size:12px; color:#c0392b;'><b>📊 방문자 수:</b> 공식 통계 미집계 (자료 없음)</p>         <hr style='border: 0.5px solid #eee; margin: 8px 0;'>         <p style='margin:0; font-size:12px; line-height:1.5; color:#444; text-align:justify;'>             <b>📜 설화 이야기:</b><br>옛날 당산봉의 굴속에 살며 제물을 받던 거대한 뱀신(지귀)을 새로 부임한 현감이 용맹하게 퇴치하여 마을의 재앙을 막았다는 전설이 전해져 내려옵니다.<br><br><span style='font-size:10px; color:#999;'>📷 사진 출처: 국가유산포털 (공공누리 제1유형)</span>         </p>     </div>     </div>`)[0];
+                popup_43908c71e8f16a484c48bf3298e54775.setContent(html_b84dfbf8b307b66589f7cce5a354f3fe);
+            
+        
+
+        marker_a2c4b564cf24b596d0f40ad9df76a418.bindPopup(popup_43908c71e8f16a484c48bf3298e54775)
+        ;
+
+        
+    
+    
+                marker_a2c4b564cf24b596d0f40ad9df76a418.setIcon(icon_2a61c6501936dba16107cc9c9b10ff45);
+            
+    
+            var marker_9da8416fe73d8b0e0329ee249e6834de = L.marker(
+                [33.2687, 126.8247],
+                {
+}
+            ).addTo(map_3129ccce90461a5a8e0f3ab3b78aa16f);
+        
+    
+            var icon_2a99ea2bdf683af3c30baacdd6d21528 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "leaf",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_92a7ba547efd6e2f5ab8b107092f4caf = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_df403d3154d4b26866933d843b999e6f = $(`<div id="html_df403d3154d4b26866933d843b999e6f" style="width: 100.0%; height: 100.0%;">     <div style='width:260px; font-family: "Malgun Gothic", sans-serif; padding: 5px;'>         <h4 style='margin: 0 0 5px 0; color:#333; font-size:16px;'>📍 남두연대</h4>         <p style='margin:0 0 5px 0; font-size:11px; color:#666;'>🏠 제주 서귀포시 남원읍 신흥리 132-1 (연대 유적지 자리)</p>          <div style='width:100%; height:130px; overflow:hidden; border-radius:6px; margin-bottom:8px;'>             <img src='https://www.heritage.go.kr/unisearch/images/monument/1657813.jpg' style='width:100%; height:100%; object-fit:cover;'>         </div>          <p style='margin:0; font-size:12px; color:#c0392b;'><b>📊 방문자 수:</b> 공식 통계 미집계 (자료 없음)</p>         <hr style='border: 0.5px solid #eee; margin: 8px 0;'>         <p style='margin:0; font-size:12px; line-height:1.5; color:#444; text-align:justify;'>             <b>📜 설화 이야기:</b><br>횃불과 연기를 올려 군사 상황을 알리던 조선 통신 시설입니다. 인간 수명을 관장하는 남두성 기운이 강해 백성들이 장수를 빌었다는 설화도 깃들어 있습니다.<br><br><span style='font-size:10px; color:#999;'>📷 사진 출처: 국가유산포털 (공공누리 제1유형)</span>         </p>     </div>     </div>`)[0];
+                popup_92a7ba547efd6e2f5ab8b107092f4caf.setContent(html_df403d3154d4b26866933d843b999e6f);
+            
+        
+
+        marker_9da8416fe73d8b0e0329ee249e6834de.bindPopup(popup_92a7ba547efd6e2f5ab8b107092f4caf)
+        ;
+
+        
+    
+    
+                marker_9da8416fe73d8b0e0329ee249e6834de.setIcon(icon_2a99ea2bdf683af3c30baacdd6d21528);
+            
+    
+            var marker_50d2eb0b224246378f64a7be2e7c5926 = L.marker(
+                [33.4571, 126.4445],
+                {
+}
+            ).addTo(map_3129ccce90461a5a8e0f3ab3b78aa16f);
+        
+    
+            var icon_eb9fd17dea12d28fe3bdbceb3c0e17d3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "leaf",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_58c97afd5cbd7b6849ec85301ed531f5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_dc7b802c19710a043896a108b238a643 = $(`<div id="html_dc7b802c19710a043896a108b238a643" style="width: 100.0%; height: 100.0%;">     <div style='width:260px; font-family: "Malgun Gothic", sans-serif; padding: 5px;'>         <h4 style='margin: 0 0 5px 0; color:#333; font-size:16px;'>📍 무수천 (오해소·엉밑살)</h4>         <p style='margin:0 0 5px 0; font-size:11px; color:#666;'>🏠 제주 제주시 광령리 무수천 (광령교 하부 계곡 진입구역)</p>          <div style='width:100%; height:130px; overflow:hidden; border-radius:6px; margin-bottom:8px;'>             <img src='https://api.cdn.visitjeju.net/photomng/imgpath/201804/30/53d3f71c-7e35-415e-90bd-eac85a87d4a6.webp' style='width:100%; height:100%; object-fit:cover;'>         </div>          <p style='margin:0; font-size:12px; color:#c0392b;'><b>📊 방문자 수:</b> 공식 통계 미집계 (자료 없음)</p>         <hr style='border: 0.5px solid #eee; margin: 8px 0;'>         <p style='margin:0; font-size:12px; line-height:1.5; color:#444; text-align:justify;'>             <b>📜 설화 이야기:</b><br>인간 세상의 백만 가지 근심이 사라진다는 뜻의 계곡으로, 신선들이 내려와 세상 시름을 잊고 바둑을 두며 놀았다는 오해소와 엉밑살 전설이 있습니다.<br><br><span style='font-size:10px; color:#999;'>📷 사진 출처: 비짓제주 (제주관광공사)</span>         </p>     </div>     </div>`)[0];
+                popup_58c97afd5cbd7b6849ec85301ed531f5.setContent(html_dc7b802c19710a043896a108b238a643);
+            
+        
+
+        marker_50d2eb0b224246378f64a7be2e7c5926.bindPopup(popup_58c97afd5cbd7b6849ec85301ed531f5)
+        ;
+
+        
+    
+    
+                marker_50d2eb0b224246378f64a7be2e7c5926.setIcon(icon_eb9fd17dea12d28fe3bdbceb3c0e17d3);
+            
+    
+            var marker_928d2981dd0234d5581d4a4b8036766a = L.marker(
+                [33.252, 126.6234],
+                {
+}
+            ).addTo(map_3129ccce90461a5a8e0f3ab3b78aa16f);
+        
+    
+            var icon_b2e7a9bdc81c6b526fb1eda2a8a5f1d2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "leaf",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c33425f86274cdc44282ed2f8e6fe2a1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_86044c7267786f8426fa5f34325a3a74 = $(`<div id="html_86044c7267786f8426fa5f34325a3a74" style="width: 100.0%; height: 100.0%;">     <div style='width:260px; font-family: "Malgun Gothic", sans-serif; padding: 5px;'>         <h4 style='margin: 0 0 5px 0; color:#333; font-size:16px;'>📍 마라도 / 쇠소깍 할망당</h4>         <p style='margin:0 0 5px 0; font-size:11px; color:#666;'>🏠 제주 서귀포시 하효동 (쇠소깍 산책로 옆 실제 할망당)</p>          <div style='width:100%; height:130px; overflow:hidden; border-radius:6px; margin-bottom:8px;'>             <img src='https://www.jeju.go.kr/images/ko/travel/cit_img11_02.jpg' style='width:100%; height:100%; object-fit:cover;'>         </div>          <p style='margin:0; font-size:12px; color:#c0392b;'><b>📊 방문자 수:</b> 26,346명 (25년 8월 기준)</p>         <hr style='border: 0.5px solid #eee; margin: 8px 0;'>         <p style='margin:0; font-size:12px; line-height:1.5; color:#444; text-align:justify;'>             <b>📜 설화 이야기:</b><br>마라도 처녀당(할망당)의 슬픈 애기업개 설화와, 쇠소깍 용소에 살던 용과 사랑을 이루지 못해 물에 빠져 죽은 처녀를 기리는 할망당 전설을 함께 다룹니다.<br><br><span style='font-size:10px; color:#999;'>📷 사진 출처: 제주특별자치도 (공공누리 제1유형)</span>         </p>     </div>     </div>`)[0];
+                popup_c33425f86274cdc44282ed2f8e6fe2a1.setContent(html_86044c7267786f8426fa5f34325a3a74);
+            
+        
+
+        marker_928d2981dd0234d5581d4a4b8036766a.bindPopup(popup_c33425f86274cdc44282ed2f8e6fe2a1)
+        ;
+
+        
+    
+    
+                marker_928d2981dd0234d5581d4a4b8036766a.setIcon(icon_b2e7a9bdc81c6b526fb1eda2a8a5f1d2);
+            
+</script>
+</html>
