@@ -1,1 +1,0 @@
-# DRYSHAMPOO-AI.github.io
